@@ -10,6 +10,7 @@ import {
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
+import BookingTicket from './components/BookingTicket/BookingTicket';
 
 export const UserContext = createContext();
 
@@ -27,8 +28,14 @@ function App() {
           <Route exact path="/home">
             <Home></Home>
           </Route>
+          <Route exact path="/login/:name">
+            <Login></Login>
+          </Route>
           <Route exact path="/login">
             <Login></Login>
+          </Route>
+          <Route exact path="/bookingTicket">
+            <BookingTicket></BookingTicket>
           </Route>
         </Switch>
       </Router>
